@@ -31,7 +31,8 @@ Padrão REST
 
 Reposta
 
-Status Code
+Status Code: 200 0K
+
 200 - 299 - sucess
 
 300 - 399 - redirect
@@ -39,6 +40,10 @@ Status Code
 400 - 499 - error client
 
 500 - 599 - internal error
+
+Response Heraders
+
+Response Body
 -->
 
 
