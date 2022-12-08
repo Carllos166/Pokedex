@@ -23,16 +23,13 @@ const pokemonList = document.getElementById('pokemonList')
 
 // aguardando uma promise = assíncrono
 
-pokeApi.getPokemons().then((pokemons) => {
-        const listItens = []
-        
-        pokemons.map()
+pokeApi.getPokemons().then((pokemons = []) => {
+    const listItens = []
 
-        for (let i = 0; i < pokemons.length; i++) {
-            const pokemon = pokemons[i];
-            listItens.push(convertPokemonToLi(pokemon))
-        }
-        
-        
-        console.log(listItens);
+    const newList = pokemons.map((pokemon) => { // map((value, index, array))
+        return convertPokemonToLi(pokemon)
     })
+    const newHTML = newList.join('')
+
+    pokemonList.innerHTML += newHTML
+})
