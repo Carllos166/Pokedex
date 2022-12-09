@@ -24,6 +24,6 @@ const pokemonList = document.getElementById('pokemonList')
 // aguardando uma promise = assíncrono
 
 pokeApi.getPokemons().then((pokemons = []) => {// map((value, index, array))
-
-    pokemonList.innerHTML += pokemons.map(convertPokemonToLi).join('')
+    const newHTML = pokemons.map(convertPokemonToLi).join('')
+    pokemonList.innerHTML = newHTML
 })
